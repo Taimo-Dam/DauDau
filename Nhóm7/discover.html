@@ -1,0 +1,231 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style> 
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+}
+nav ul {
+    list-style-type: none; /* ko có dấu đầu dòng*/
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các mục menu */
+}
+main {
+    padding: 10px;
+    margin-top: 80px; /* Adjust this value based on your header height */
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.genre-container,
+.playlist-container,
+.artist-container,
+.video-container,
+.release-container,
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.genre,
+.playlist,
+.artist,
+.video,
+.release,
+.album {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1 1 calc(33% - 20px);
+}
+
+
+.gradient-text {
+    background: linear-gradient(to right, #ff69ff, #0E9EEF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.genre-container {
+    display: flex; 
+    flex-wrap: wrap; /* genre xuống dòng nếu không đủ chỗ */
+    justify-content: space-around; /* căn giữa  */
+    background-color: #0a0801; 
+}
+
+.genre {
+    flex: 1 1 100px; /* Đặt kích thước tối thiểu cho mỗi genre */
+    margin: 10px; /* Khoảng cách giữa các genre */
+    border: 1px solid #eee9e9; /* Đường viền cho mỗi genre */
+    border-radius: 8px; /* gọt tròn các góc */
+    overflow: hidden; /* ẩn phần thừa */
+    transition: transform 0.3s; /*chuyển động mượt mà nha*/
+    position: relative;
+    z-index: 1; /* Lower z-index than header */
+    transition: all 0.3s ease;
+}
+
+.genre:hover {
+    transform: scale(1.05); /* đọng đậy khi click */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    z-index: 2; /* Higher than normal state but lower than header */
+}
+
+.genre img {
+    width: 100%; 
+    height: auto; /* giữ tl hình ảnh */
+}
+.playlist-container {
+    display: flex;
+    flex-direction: row ; /* Sắp xếp theo chiều dọc */
+    align-items: center; /* Căn giữa các playlist */
+    padding: 20px;
+    background-color: #f0f0f0; /* Màu nền cho container */
+}
+
+/* Định dạng cho mỗi playlist */
+.playlist {
+    flex: 1 1 100px; 
+    margin: 10px; 
+    border: 1px solid #eee9e9;
+    border-radius: 8px; 
+    overflow: hidden; 
+
+}
+
+/* định dạng hình ảnh playlist */
+.playlist img {
+    width: 100%; /*  rộng 100%  */
+    height: auto;
+}
+
+/* Định dạng cho tiêu đề playlist */
+.playlist::before {
+    position: absolute; /*tiêu đề*/
+    top: 10px; /* cách trên xuống */
+    left: 50%; /* căn giữa theo chiều ngang */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* mờ tiêu đề */
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px; /*bo tròn góc*/
+    font-size: 16px; 
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+</style>
+<body>
+    <main>
+    <section id = "discover">
+        <section class="music-genres">
+            <h2>Music Genres</h2>
+            <div class="genre-container">
+                <div class="genre"> <a href="albums.html" >Trending Tracks 
+                  <img alt="M&U" class="w-full h-full object-cover" 
+                    src="images/anh1.jpg"/> </a>
+                </div>
+                <div class="genre">Rock Tracks
+                    <img alt="M&U" class="w-full h-full object-cover" 
+                    src="images/anh2.avif"/>
+                </div>
+                <div class="genre">Jack Tracks
+                    <img alt="M&U" class="w-full h-full object-cover" 
+                    src="images/anh3.avif"/>
+                </div>
+                <div class="genre">Phong Tracks
+                    <img alt="M&U" class="w-full h-full object-cover" 
+                    src="images/anh4.webp"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="mood-playlist">
+            <h2>Mood Playlist</h2>
+            <div class="playlist-container">
+                <div class="playlist">Sad Playlist
+                    <img alt="M&U" class="w-full h-full object-cover" 
+                    src="images/anh5.avif"/>
+                </div>
+                <div class="playlist">Chill Playlist
+                    <img alt="M&U" class="w-full h-full object-cover"
+                    src="images/anh6.avif"/>
+                </div>
+                <div class="playlist">Happy Playlis
+                    <img alt="M&U" class="w-full h-full object-cover"
+                    src="images/anh7.avif"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-artists">
+            <h2>Radio Nổi Bật</h2>
+            <div class="artist-container">
+                <div class="artist">V-POP</div>
+                <div class="artist">K-POP</div>
+                <div class="artist">Rap Việt</div>
+                <div class="artist">Anh Trai Say II</div>
+            </div>
+        </section>
+
+        <section class="music-videos">
+            <h2>Music Videos</h2>
+            <div class="video-container">
+                <div class="video">Dancing in the dảk</div>
+                <div class="video">How you like that?</div>
+                <div class="video">Ghé qua</div>
+                <div class="video">Dẫu có lỗi lầm</div>
+            </div>
+        </section>
+
+        <section class="new-releases">
+            <h2>New Release Songs</h2>
+            <div class="release-container">
+                <div class="release">Time</div>
+                <div class="release">112</div>
+                <div class="release">We Don’t Care</div>
+            </div>
+        </section>
+
+        <section class="top-albums">
+            <h2>Top Albums</h2>
+            <div class="album-container">
+                <div class="album">He is Dog</div>
+                <div class="album">F**ck</div>
+                <div class="album">Shit of Life</div>
+                <div class="album">Con cua</div>
+            </div>
+        </section>
+    </section>
+    </main>
+</body>
+</html>

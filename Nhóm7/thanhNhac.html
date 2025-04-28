@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<style>
+    body {
+        background: #0f0f0f;
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .player {
+        background: #1e1e1e;
+        padding: 20px;
+        border-radius: 16px;
+        width: 600px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .cover {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #progress,
+    #volume {
+        flex-grow: 1;
+    }
+</style>
+
+<body>
+
+    
+
+    <div class="player">
+        <div class="info">
+            <img src="anh/VN/SonTungMTP.webp" class="cover" alt="Album">
+            <div>
+                <h3>Hãy Trao Cho Anh</h3>
+                <p>Sơn Tùng M-TP, Snoop Dogg</p>
+            </div>
+        </div>
+
+        <audio id="audio" src="audio/nhacTre/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3"></audio>
+
+        <div class="controls">
+            <button id="playPause">▶️</button>
+            <span id="current">00:00</span>
+            <input type="range" id="progress" value="0" min="0" max="100">
+            <span id="duration">00:00</span>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById("audio");
+        const playPauseBtn = document.getElementById("playPause");
+        const progress = document.getElementById("progress");
+        const current = document.getElementById("current");
+        const duration = document.getElementById("duration");
+        const volume = document.getElementById("volume");
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m < 10 ? "0" + m : m}:${s < 10 ? "0" + s : s}`;
+        }
+
+        playPauseBtn.addEventListener("click", () => {
+            // trả về true khi mà audio dừng và false khi audio đang chạy
+            if (audio.paused) {
+                // cho chạy nhạc
+                audio.play();
+                playPauseBtn.textContent = "⏸️";
+            } else {
+                // cho dừng nhạc
+                audio.pause();
+                playPauseBtn.textContent = "▶️";
+            }
+        });
+    
+        // khi audio load xong nhạc thì sẽ lấy ra thời gian của bản nhạc trả về 
+        audio.addEventListener("loadedmetadata", () => {
+            // audio.duration là thời gian của bản nhạc
+            duration.textContent = formatTime(audio.duration);
+        });
+        // khi audio chạy thì sự kiện timeupdate sẽ được gọi liên tục có chuyển động của nhạc thì sư kiện này sẽ được gọi
+        // nó chỉ hoạt động khi audio đang chạy bình thường
+         audio.addEventListener("timeupdate", () => {
+            // audio.currentTime là thời gian hiện tại của bản nhạc
+            current.textContent = formatTime(audio.currentTime);
+            // chuyển động thanh trược theo thời gian nên cần chuyển đơn vị theo thời gian bằng cách lấy thời gian hiện tại chia cho thời gian tổng của nhạc rồi nhân 100%
+            progress.value = (audio.currentTime / audio.duration) * 100;
+        }); 
+
+        // bắt chuyển động của người dùng trên thanh trượt để lấy số dây hiện tại của nhạc gán cho audio.currentTime để 
+        //cho sự kiện timeupdate được gọi liên tục update % của nhạc
+        progress.addEventListener("input", () => {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+        });
+
+        volume.addEventListener("input", () => {
+            audio.volume = volume.value;
+        });
+
+    </script>
+</body>
+
+</html>
