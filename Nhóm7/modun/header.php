@@ -703,8 +703,8 @@ if (isLoggedIn()) {
                 </div>
                 <?php else: ?>  
                 <!-- User is not logged in, show login/signup buttons -->
-                <a href="../login.php">Login</a>
-                <a href="../register.php"><button class="button">Sign up</button></a>
+                <a href="/Nhóm7/login.php">Login</a>
+                <a href="/Nhóm7/register.php"><button class="button">Sign up</button></a>
                 <?php endif; ?>
             </nav>
         </div>
