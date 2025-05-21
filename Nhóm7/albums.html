@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Songs Mix</title>
+    <link rel="stylesheet" href="albums.css">
+</head>
+<style> 
+    /* albums.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #fff;
+    background: linear-gradient(to right, rgb(0, 200, 255), #121212);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.back-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-right button {
+    background: none;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Playlist Info Section */
+.playlist-info {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin: 0px 0;
+    padding: 50px;
+}
+
+.playlist-info img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+.details h1 {
+    font-size: 38px;
+    margin-top: 0px;
+}
+
+.details .highlight {
+    color: #e846ba; 
+}
+
+.details p {
+    font-size: medium;
+    margin: 10px 0;
+}
+
+.play-all {
+    margin-top: 200px;
+    background-color: #e846ba;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Songs Table */
+table {
+    width: 100%;
+    border-collapse: collapse;/*kết hợp 2 đường viền của 2 ô cạnh nhau*/
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+thead th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr td div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+tbody tr img{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+}
+
+tbody tr td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.musicname {
+    text-align: right;
+}
+
+tbody tr td:last-child {
+    text-align: center;
+}
+.back-button img {
+    width: 30px;
+    height: 30px;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="back-button"> <a href="index.php" >
+                <img  src="images/left-arrow.png"/> </a>
+            </div>
+            <div class="header-right">
+                <button>Share</button>
+                <button>About</button>
+                <button>Premium</button>
+            </div>
+        </header>
+
+        <!-- Playlist Information -->
+        <div class="playlist-info">
+            <img src="images/introducing.jpg" alt="Playlist Cover">
+            <div class="details">
+                <h1>Trending Songs <span class="highlight">Mix</span></h1>
+                <p>tate mcrae, nightmares, the neighborhood, doja cat and more...</p>
+                <p><strong>20 songs <span class="highlight">•</span> 1h 36m</strong></p>
+
+            </div>
+            <div class="playlist-info-right"><button class="play-all">Play All</button></div>
+        </div>
+
+        <!-- Songs Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Singer</th>
+                    <th>Release Date</th>
+                    <th>Album</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><div><img src="images/introducing0.jpg" alt="Sorforce">Sorforce</div></td>
+                    <td>huy</td>
+                    <td>Nov 4, 2023</td>
+                    <td>Hard to Imagine Neighbourhood Ever Changing</td>
+                    <td><div><div>3:46</div><div>♥</div><div>...</div></div></td>                
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><div><img src="images/introducing1.jpg" alt="sing">Nightmares</div></td>
+                    <td>thanh</td>
+                    <td>Oct 26, 2023</td>
+                    <td>Nightmares</td>
+                    <td><div><div>3:25</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><div><img src="images/introducing2.jpg" alt="">Greedy</div></td>
+                    <td>nai</td>
+                    <td>Nov 30, 2023</td>
+                    <td>Greedy</td>
+                    <td><div><div>2:11</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><div><img src="images/introducing3.jpg" alt="">Loving On Me</div></td>
+                    <td>phon</td>
+                    <td>Dec 15, 2023</td>
+                    <td>Lovin On Me</td>
+                    <td><div><div>2:18</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><div><img src="images/introducing0.jpg" alt="Sorforce">Sorforce</div></td>
+                    <td>huy</td>
+                    <td>Nov 4, 2023</td>
+                    <td>Hard to Imagine Neighbourhood Ever Changing</td>
+                    <td><div><div>3:46</div><div>♥</div><div>...</div></div></td>                
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><div><img src="images/introducing1.jpg" alt="sing">Nightmares</div></td>
+                    <td>thanh</td>
+                    <td>Oct 26, 2023</td>
+                    <td>Nightmares</td>
+                    <td><div><div>3:25</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><div><img src="images/introducing2.jpg" alt="">Greedy</div></td>
+                    <td>nai</td>
+                    <td>Nov 30, 2023</td>
+                    <td>Greedy</td>
+                    <td><div><div>2:11</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><div><img src="images/introducing3.jpg" alt="">Loving On Me</div></td>
+                    <td>phon</td>
+                    <td>Dec 15, 2023</td>
+                    <td>Lovin On Me</td>
+                    <td><div><div>2:18</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><div><img src="images/introducing0.jpg" alt="Sorforce">Sorforce</div></td>
+                    <td>huy</td>
+                    <td>Nov 4, 2023</td>
+                    <td>Hard to Imagine Neighbourhood Ever Changing</td>
+                    <td><div><div>3:46</div><div>♥</div><div>...</div></div></td>                
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><div><img src="images/introducing1.jpg" alt="sing">Nightmares</div></td>
+                    <td>thanh</td>
+                    <td>Oct 26, 2023</td>
+                    <td>Nightmares</td>
+                    <td><div><div>3:25</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><div><img src="images/introducing2.jpg" alt="">Greedy</div></td>
+                    <td>nai</td>
+                    <td>Nov 30, 2023</td>
+                    <td>Greedy</td>
+                    <td><div><div>2:11</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><div><img src="images/introducing3.jpg" alt="">Loving On Me</div></td>
+                    <td>phon</td>
+                    <td>Dec 15, 2023</td>
+                    <td>Lovin On Me</td>
+                    <td><div><div>2:18</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><div><img src="images/introducing0.jpg" alt="Sorforce">Sorforce</div></td>
+                    <td>huy</td>
+                    <td>Nov 4, 2023</td>
+                    <td>Hard to Imagine Neighbourhood Ever Changing</td>
+                    <td><div><div>3:46</div><div>♥</div><div>...</div></div></td>                
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><div><img src="images/introducing1.jpg" alt="sing">Nightmares</div></td>
+                    <td>thanh</td>
+                    <td>Oct 26, 2023</td>
+                    <td>Nightmares</td>
+                    <td><div><div>3:25</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td><div><img src="images/introducing2.jpg" alt="">Greedy</div></td>
+                    <td>nai</td>
+                    <td>Nov 30, 2023</td>
+                    <td>Greedy</td>
+                    <td><div><div>2:11</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td><div><img src="images/introducing3.jpg" alt="">Loving On Me</div></td>
+                    <td>phon</td>
+                    <td>Dec 15, 2023</td>
+                    <td>Lovin On Me</td>
+                    <td><div><div>2:18</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td><div><img src="images/introducing0.jpg" alt="Sorforce">Sorforce</div></td>
+                    <td>huy</td>
+                    <td>Nov 4, 2023</td>
+                    <td>Hard to Imagine Neighbourhood Ever Changing</td>
+                    <td><div><div>3:46</div><div>♥</div><div>...</div></div></td>                
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td><div><img src="images/introducing1.jpg" alt="sing">Nightmares</div></td>
+                    <td>thanh</td>
+                    <td>Oct 26, 2023</td>
+                    <td>Nightmares</td>
+                    <td><div><div>3:25</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td><div><img src="images/introducing2.jpg" alt="">Greedy</div></td>
+                    <td>nai</td>
+                    <td>Nov 30, 2023</td>
+                    <td>Greedy</td>
+                    <td><div><div>2:11</div><div>♥</div><div>...</div></div></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td><div><img src="images/introducing3.jpg" alt="">Loving On Me</div></td>
+                    <td>phon</td>
+                    <td>Dec 15, 2023</td>
+                    <td>Lovin On Me</td>
+                    <td><div><div>2:18</div><div>♥</div><div>...</div></div></td>
+                </tr>                               
+                <!-- them nhac vao day -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

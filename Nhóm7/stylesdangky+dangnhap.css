@@ -1,0 +1,220 @@
+/* Body background */
+body {
+    background-color: #2E2E2E; /* Dark grey background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the entire layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%; /* Increased width */
+    max-width: 1300px; /* Increased max-width */
+    margin: 0 auto;
+}
+
+/* Info box styling */
+.info-box {
+    background-color: #2E2E2E; /* Dark purple */
+    color: #FFFFFF; /* White text */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    max-width: 550px; /* Increased max-width */
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.info-box .highlight {
+    color: #FF00FF; /* Bright pink */
+}
+
+.info-box .login-link {
+    color: #0000FF; /* Blue text for links */
+    text-decoration: none;
+}
+
+.info-box .login-link:hover {
+    text-decoration: underline;
+}
+
+/* Form container background */
+.form-container {
+    background-color: #4B004B; /* Dark purple */
+    color: #FFFFFF; /* White text */
+    border-radius: 12px; /* Updated border-radius */
+    padding: 25px; /* Updated padding */
+    width: 550px; /* Set width */
+    height: 500px; /* Set height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 50px; /* Adjust as needed to move it to the right */
+}
+/* Form header */
+.form-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-header-link {
+    color: #FF00FF; /* Bright pink */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-header-link.active {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.form-button {
+    background-color: #FF00FF; /* Bright pink */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Optional styling */
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-button:hover {
+    background-color: #E600E6; /* Slightly darker pink for hover effect */
+}
+
+/* Google button */
+.google-button {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.google-button img {
+    margin-right: 10px;
+}
+
+.google-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Links */
+.form-link {
+    color: #0000FF; /* Blue text for links */
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* Input fields */
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #B3B3FF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #B3B3FF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF00FF;
+    box-shadow: 0 0 5px rgba(255, 0, 255, 0.2);
+}
+
+/* Form title */
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+/* Checkbox container */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+/* Separator */
+.separator {
+    margin: 20px 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    height: 1px;
+    width: 40%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
