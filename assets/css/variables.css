@@ -1,0 +1,29 @@
+:root {
+    /* Layout measurements */
+    --header-height: 60px;
+    --sidebar-width: 72px;
+    --sidebar-expanded-width: 240px;
+    --footer-height: 300px;
+
+    /* Core colors */
+    --primary: #ff00ff;      /* Main pink/magenta */
+    --secondary: #9f3ef9;    /* Purple accent */
+    --accent: #00ffff;       /* Cyan accent for highlights */
+
+    /* Background colors */
+    --bg-dark: #0f0f0f;      /* Main dark background */
+    --bg-darker: #0a0a0a;    /* Slightly darker for contrasts */
+    --bg-overlay: rgba(15, 15, 15, 0.95); /* For overlays and backdrops */
+
+    /* Text colors */
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --text-muted: #666666;
+
+    /* Interactive states */
+    --hover-bg: rgba(255, 0, 255, 0.15);
+    --active-bg: rgba(255, 0, 255, 0.2);
+
+    /* Borders */
+    --border-color: rgba(255, 255, 255, 0.1);
+}

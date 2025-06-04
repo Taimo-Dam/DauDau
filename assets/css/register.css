@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-error {
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 4px solid #ff0000;
+    color: #ff0000;
+}
+
+.alert-success {
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 4px solid #00ff00;
+    color: #00ff00;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 40px;
+    border: none;
+    border-bottom: 2px solid #ffffff3d;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    color: #ffffff8c;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #ffffff8c;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #ffffff8c;
+}
+
+.input-group .toggle-password {
+    position: absolute;
+    left: 290px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+    transition: all 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color, #ff00ff);
+}
+
+.toggle-password.fa-eye-slash {
+    color: var(--primary-color, #ff00ff);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #cc00cc;
+    transform: translateY(-2px);
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff3d;
+}
+
+.social-login span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    color: #000;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.info-box {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    color: #fff;
+    
+}
+
+.info-box h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.info-box p {
+    color: #ffffff8c;
+}
+
+.info-box a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,98 @@
+@import 'variables.css';
+
+.footer {
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section.about {
+    flex: 2;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff69b4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom .gradient-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-bottom .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:nth-child(1) i:hover {color: #1877F2; } /* Facebook */
+
+
+.social-icons a:nth-child(2) i:hover {
+    border-radius: 25%;
+    background-image: conic-gradient(#8A3AB9, #E95950, #BC2A8D, #FCCC63, #FBAD50, #CD486B, #4C68D7); } /* Instagram */
+.social-icons a:nth-child(3) i:hover { color: #1DA1F2; } /* Twitter */
+.social-icons a:nth-child(4) i:hover { color: #25D366; } /* Phone (WhatsApp màu mặc định) */

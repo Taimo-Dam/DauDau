@@ -1,0 +1,142 @@
+.albums-container {
+    padding: 20px;
+    background: var(--bg-color);
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.albums-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff00ff;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.song-card, .album-card {
+    background: var(--bg-overlay);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.song-card:hover, .album-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.album-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.album-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.song-card:hover .play-overlay,
+.album-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-overlay i {
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.song-card:hover .play-overlay i {
+    transform: scale(1.1);
+}
+
+.play-overlay i.bx-pause-circle {
+    color: #7c3aed;
+}
+
+.album-info {
+    padding: 15px;
+}
+
+.album-info h3 {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .album-info h3 {
+        font-size: 1rem;
+    }
+
+    .play-overlay i {
+        font-size: 36px;
+    }
+
+    .albums-container {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+/* SweetAlert Custom Styles */
+.custom-popup {
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+.custom-confirm-button:focus,
+.custom-cancel-button:focus {
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3) !important;
+}
+
+.custom-toast {
+    background: rgba(26, 22, 37, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* Style the timer progress bar */
+.swal2-timer-progress-bar {
+    background: #7c3aed !important;
+}

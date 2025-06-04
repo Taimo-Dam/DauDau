@@ -1,0 +1,165 @@
+/* Root variables */
+:root {
+    --primary-color: #ff69b4;
+    --secondary-color: #1e90ff;
+    --bg-color: #2f2f2f;
+    --text-color: #fff;
+    --overlay-color: rgba(0,0,0,0.7);
+    --card-hover-bg: rgba(255,255,255,0.1);
+    --header-height: 60px;
+    --sidebar-width: 240px;
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.main-content {
+    padding-top: var(--header-height);
+    margin-left: var(--sidebar-width);
+}
+
+/* Artist header section */
+.artist-header {
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    background: linear-gradient(to bottom, transparent, var(--overlay-color));
+    margin-bottom: 30px;
+}
+
+.artist-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-right: 40px;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.artist-image:hover {
+    transform: scale(1.05);
+}
+
+.artist-info {
+    color: var(--text-color);
+    flex: 1;
+}
+
+.artist-info h1 {
+    font-size: 3.5em;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.artist-info p {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Song list section */
+.song-list {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: var(--sidebar-width);
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.song-item:hover {
+    background: var(--card-hover-bg);
+    transform: translateX(10px);
+}
+
+.song-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.song-info p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+.play-button {
+    margin-left: 20px;
+    font-size: 2em;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.song-item:hover .play-button {
+    transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding-top: var(--header-height);
+    }
+
+    .artist-header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .artist-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .artist-info h1 {
+        font-size: 2.5em;
+    }
+
+    .song-list {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .song-item {
+        padding: 10px;
+    }
+}
